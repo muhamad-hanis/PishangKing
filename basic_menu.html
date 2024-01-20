@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name=“description” content=“This is Basic Menu of Pishang King”>
+    <title>Pishang King</title>
+    
+<style>
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+        margin: 0;
+        padding: 0;
+        font-family: 'arial', sans-serif;
+        box-sizing: border-box;
+        background-color: #FFD230;
+    }
+
+    nav {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 80px;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 80px; 
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active, a:hover {
+    background: #1b9bff;
+    transition: .5s;
+}
+
+@media only screen and (max-width: 768px) {
+    label.logo {
+        padding: 0 10px; 
+    }
+
+    nav ul {
+        float: none;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        line-height: 40px; 
+        margin: 0;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px 0;
+    }
+}
+
+    header {
+        font-family: 'Garbata', sans-serif;
+        font-size: 30px;
+        color: #000000;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .gallery {
+        width: 1100px;
+        display: flex;
+        overflow-x: scroll;
+    }
+
+    .gallery div {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 20px;
+        padding: 4px;
+        flex: none;
+    }
+
+    .gallery div span {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .gallery div img {
+        width: 400px;
+        height: 400px;
+        transition: transform 0.5s;
+    }
+
+    .image-overlay {
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 0.5s;
+        text-align: center;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.7); 
+        padding: 10px;
+        width: 100%; 
+        box-sizing: border-box;
+    }
+
+    .gallery div span:hover .image-overlay {
+        opacity: 1;
+    }
+
+    .gallery::-webkit-scrollbar {
+        display: none;
+    }
+
+    .gallery-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 3% auto;
+    }
+
+    #backBtn, #nextBtn {
+        width: 50px;
+        cursor: pointer;
+        margin: 40px;
+    }
+
+    .gallery div img:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+    .marquee{
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        margin-top: 60px;
+    }
+
+</style>
+</head>
+
+<body>
+
+    <nav>
+        <label class="logo">PISHANG KING</label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="background.html">Background</a></li>
+            <li><a class="active" href="basic_menu.html">Basic Menu</a></li>
+            <li><a href="full_menu.html">Full Menu</a></li>
+            <li><a href="customer_testimonial.html">Customer Testimonial</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <header>
+         <h1><b>BASIC MENU</b></h1>
+    </header>
+
+    <div class="gallery-wrap">
+        <img src="image/left.png" id="backBtn">
+        <div class="gallery">
+            <div>
+                <span>
+                    <img src="image/menu1.jpg">
+                    <div class="image-overlay"><b>Chocolate<br>RM9</b></div>
+                </span>
+                <span>
+                    <img src="image/menu2.jpg">
+                    <div class="image-overlay"><b>Cheese<br>RM9</b></div>
+                </span>
+                <span>
+                    <img src="image/menu3.jpg">
+                    <div class="image-overlay"><b>Strawberry<br>RM9</b></div>
+                </span>
+            </div>
+            <div>
+                <span>
+                    <img src="image/menu5.jpg">
+                    <div class="image-overlay"><b>Matcha<br>RM9</b></div>
+                </span>
+                <span>
+                    <img src="image/menu6.png">
+                    <div class="image-overlay"><b>Blueberry<br>RM9</b></div>
+                </span>
+                <span>
+                    <img src="image/menu7.png">
+                    <div class="image-overlay"><b>Mango<br>RM9</b></div>
+                </span>
+                <span>
+                    <img src="image/menu8.png">
+                    <div class="image-overlay"><b>Milky Red Velvet<br>RM9</b></div>
+                </span>
+            </div>
+        </div>
+        <img src="image/right.png" id="nextBtn">
+    </div>
+
+    <script>
+
+        let scrollContainer = document.querySelector(".gallery");
+        let backBtn = document.getElementById("backBtn");
+        let nextBtn = document.getElementById("nextBtn");
+
+        scrollContainer.addEventListener("wheel", (evt) => {
+            evt.preventDefault();
+            scrollContainer.scrollLeft += evt.deltaY;
+            scrollContainer.style.scrollBehaviour = "auto";
+        });
+
+        nextBtn.addEventListener("click", ()=>{
+            scrollContainer.style.scrollBehaviour = "smooth";
+            scrollContainer.scrollLeft += 900;
+        });
+
+        backBtn.addEventListener("click", ()=>{
+            scrollContainer.style.scrollBehaviour = "smooth";
+            scrollContainer.scrollLeft -= 900;
+        });
+
+    </script>
+
+<section class="marquee">
+    <p><marquee direction="left" scrollamount="12">Customer can request for one full flavour, or combination of different flavour in one order, or extra flavour for FREE of charge!</marquee>
+    </p>
+</section>
+</body>
+</html>

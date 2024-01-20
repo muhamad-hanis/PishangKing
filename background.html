@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name=“description” content=“This is background of Pishang King”>
+	<title>Pishang King</title>
+<style>
+
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('image/banana.jpg');
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 80px;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 80px; 
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active, a:hover {
+    background: #1b9bff;
+    transition: .5s;
+}
+
+@media only screen and (max-width: 768px) {
+    label.logo {
+        padding: 0 10px; 
+    }
+
+    nav ul {
+        float: none;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        line-height: 40px; 
+        margin: 0;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px 0;
+    }
+}
+
+header {
+    font-family: 'Garbata', sans-serif;
+    font-size: 72px;
+    color: #000000;
+    text-align: center;
+}
+
+.image1 {
+    width: 700px;
+    border: 5px solid #000000;
+    box-sizing:border-box;
+    margin-top: 70px;
+    margin-left: 20px;
+}
+
+.intro{
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 35px;
+	text-align: center;
+	padding-top: 40px;
+	opacity: 0; 
+    animation: fadeIn 2s forwards; 
+}
+
+.intro p{
+	padding-top: 30px;
+	padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 30px;
+    margin-left:720px;
+	color: #000000;
+    text-align: justify;
+    background-color: #fff;
+}
+
+@keyframes fadeIn {
+    from {
+    opacity: 0; 
+    }
+    to {
+    opacity: 1; 
+    }
+}
+.marquee{
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        margin-top: 116px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+</style>
+</head>
+<body>
+
+<nav>
+    <label class="logo">PISHANG KING</label>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="background.html">Background</a></li>
+        <li><a href="basic_menu.html">Basic Menu</a></li>
+        <li><a href="full_menu.html">Full Menu</a></li>
+        <li><a href="customer_testimonial.html">Customer Testimonial</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<div>
+<img class="image image1" src="image/background.jpg" align="left">
+</div>
+
+
+<div class="intro">
+
+	<h1>
+		<b>Background</b>
+	</h1>
+
+	<p>
+		We have been serving banana fried cheese since 2020. This business started when I and two friends started doing this business just to fill our free time but over time it made us interested in continuing to do business. Our mission is to make sure you always smile in every bite of fried bananas. Brighten up your day with fried bananas.
+	</p>
+
+</div>
+
+<section class="marquee">
+    <p><marquee direction="left" scrollamount="12">Our mission is to treat your mouth with great taste of banana</marquee></p>
+</section>
+
+</body>
+</html>
